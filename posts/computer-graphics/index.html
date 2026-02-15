@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Journey Self-Learning Computer Graphics Programming &ndash; Davide Radaelli</title>
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,400;1,400&family=Open+Sans:wght@400;600;700&display=swap">
+  <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}:root{--color-primary:#000000;--color-secondary:#007cba;--color-foreground:#333333;--color-foreground-low-contrast:#444444;--color-background:#FFFFFF;--color-tertiary:#FAFAFA;--color-border:#EFEFEF;--font-heading:Chivo,"Playfair Display",Georgia,Times,serif;--font-body:"Open Sans","Fira Sans",Helvetica,Arial,sans-serif;--content-width:620px;--spacing-unit:20px;--spacing-horizontal:25px;--spacing-vertical:30px;}html{scrollbar-gutter:stable}body{font-family:var(--font-body);font-size:18px;font-weight:normal;color:var(--color-foreground);background:var(--color-background);line-height:1.7;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}a{color:var(--color-primary);text-decoration:underline;text-decoration-color:var(--color-secondary);text-decoration-thickness:1px;text-underline-offset:2px;}a:hover{color:var(--color-secondary);}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:normal;line-height:1.3;color:var(--color-primary);margin:0;padding:0;}h1{font-size:48px;}h2{font-size:32px;}h3{font-size:28px;}h4{font-size:24px;}nav{display:flex;align-items:center;gap:0.5em;padding:var(--spacing-vertical) calc(2 * var(--spacing-horizontal));flex-wrap:wrap;max-width:var(--content-width);margin:0 auto;}nav a{color:var(--color-primary);font-family:var(--font-body);font-size:16px;font-weight:normal;text-decoration:none;padding:0 0.4em;}nav a:hover{color:var(--color-secondary);text-decoration:none;}nav .social-icons{display:flex;align-items:center;gap:0.4em;margin-left:0.2em;}nav .social-icons a{display:flex;align-items:center;padding:0;line-height:0;}nav .social-icons a[aria-label="Twitter"]{color:#1DA1F2;}nav .social-icons a[aria-label="YouTube"]{color:#FF0000;}nav .social-icons a:hover{color:var(--color-secondary);transform:scale(1.1);}nav .social-icons svg{width:24px;height:24px;fill:currentColor;}.home-content{display:flex;flex-wrap:nowrap;gap:2em;max-width:var(--content-width);margin:0 auto;padding:0 calc(2 * var(--spacing-horizontal));}.home-content .col-image{flex:0 0 33.33%;}.home-content .col-image img{width:100%;height:auto;display:block;}.home-content .col-text{flex:0 0 66.67%;max-width:66.67%;}.home-content .col-text h1{margin-bottom:calc(0.666 * var(--spacing-vertical));}.home-content .col-text p{margin-top:calc(0.666 * var(--spacing-vertical));margin-bottom:calc(0.666 * var(--spacing-vertical));}.page{max-width:var(--content-width);margin:0 auto;padding:0 calc(2 * var(--spacing-horizontal)) var(--spacing-vertical);}.page-header{margin-bottom:calc(0.666 * var(--spacing-vertical));}.page-header .meta{color:var(--color-foreground-low-contrast);font-family:var(--font-heading);font-size:14px;}.page-body > *{margin-top:calc(0.666 * var(--spacing-vertical));margin-bottom:calc(0.666 * var(--spacing-vertical));}.page-body h2{font-family:var(--font-heading);font-size:32px;font-weight:normal;line-height:1.3;color:var(--color-primary);}.page-body h3{font-family:var(--font-heading);font-size:28px;font-weight:normal;line-height:1.3;color:var(--color-primary);}.page-body h4{font-family:var(--font-heading);font-size:24px;font-weight:normal;line-height:1.3;color:var(--color-primary);}.page-body ul,.page-body ol{font-family:var(--font-body);padding-left:calc(2 * var(--spacing-horizontal));}.page-body ul{list-style-type:disc;}.page-body ol{list-style-type:decimal;}.page-body li{margin-top:calc(0.25 * var(--spacing-vertical));margin-bottom:calc(0.25 * var(--spacing-vertical));}.page-body blockquote{border-left:1px solid var(--color-secondary);padding:0;padding-left:calc(2 * var(--spacing-horizontal));margin:calc(0.666 * var(--spacing-vertical)) 0;font-family:var(--font-body);font-style:normal;}.page-body img{max-width:100%;height:auto;}.page-body figure{margin:calc(0.666 * var(--spacing-vertical)) 0;}.page-body figure img{max-width:100%;height:auto;display:block;margin:0 auto;}.page-body figcaption{color:var(--color-foreground-low-contrast);font-size:14px;line-height:1.7;margin-top:calc(0.5 * var(--spacing-unit));text-align:center;}.page-body code{font-family:monospace,monospace;font-size:1em;}.page-body pre{font-family:monospace,monospace;font-size:1em;overflow:scroll;margin:calc(0.666 * var(--spacing-vertical)) 0;padding:0;}.page-body pre code{background:none;padding:0;}.page-body hr{border:none;border-top:2px solid var(--color-border);width:calc(6 * var(--spacing-horizontal));margin:calc(0.666 * var(--spacing-vertical)) auto;}.blog-list{list-style:none;padding:0;}.blog-list li{margin-top:calc(0.666 * var(--spacing-vertical));margin-bottom:calc(0.666 * var(--spacing-vertical));}.blog-list li a{font-family:var(--font-heading);font-size:28px;font-weight:normal;line-height:1.3;color:var(--color-primary);text-decoration:underline;text-decoration-color:var(--color-secondary);text-decoration-thickness:1px;text-underline-offset:2px;}.blog-list li a:hover{color:var(--color-secondary);}.blog-list .date{display:block;color:var(--color-foreground-low-contrast);font-family:var(--font-heading);font-size:14px;margin-top:4px;}.back-link{display:inline-block;font-size:14px;color:var(--color-primary);text-decoration:underline;text-decoration-color:var(--color-secondary);margin-bottom:var(--spacing-vertical);}.back-link:hover{color:var(--color-secondary);}.back-link::before{content:'\2190\00a0';}footer{padding:var(--spacing-vertical) calc(2 * var(--spacing-horizontal));max-width:var(--content-width);margin:0 auto;color:var(--color-foreground);font-family:var(--font-heading);font-size:16px;}@media (max-width:600px){nav{padding:var(--spacing-unit) var(--spacing-horizontal);}.home-content{flex-wrap:wrap;padding:0 var(--spacing-horizontal);}.home-content .col-image{flex:0 0 100%;max-width:90%;}.home-content .col-text{flex:0 0 100%;max-width:100%;}.page{padding:0 var(--spacing-horizontal) var(--spacing-vertical);}.blog-list li a{font-size:24px;}}</style>
+</head>
+<body>
+  <nav>
+      <a href="/">Home</a>
+      <a href="/now/">Now</a>
+      <a href="/blog/">Blog</a>
+      <a href="https://davideradaelli.substack.com/" target="_blank">Updates</a>
+      <span class="social-icons">
+        <a href="https://twitter.com/daviderady" target="_blank" aria-label="Twitter"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"/></svg></a>
+        <a href="https://www.youtube.com/channel/UCmYjuQS6o5-F9sqX8Pwvsiw" target="_blank" aria-label="YouTube"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.8,8.001c0,0-0.195-1.378-0.795-1.985c-0.76-0.797-1.613-0.801-2.004-0.847c-2.799-0.202-6.997-0.202-6.997-0.202 h-0.009c0,0-4.198,0-6.997,0.202C4.608,5.216,3.756,5.22,2.995,6.016C2.395,6.623,2.2,8.001,2.2,8.001S2,9.62,2,11.238v1.517 c0,1.618,0.2,3.237,0.2,3.237s0.195,1.378,0.795,1.985c0.761,0.797,1.76,0.771,2.205,0.855c1.6,0.153,6.8,0.201,6.8,0.201 s4.203-0.006,7.001-0.209c0.391-0.047,1.243-0.051,2.004-0.847c0.6-0.607,0.795-1.985,0.795-1.985s0.2-1.618,0.2-3.237v-1.517 C22,9.62,21.8,8.001,21.8,8.001z M9.935,14.594l-0.001-5.62l5.404,2.82L9.935,14.594z"/></svg></a>
+      </span>
+  </nav>
+
+  <article class="page">
+    <a href="/blog/" class="back-link">All posts</a>
+    <div class="page-header">
+      <h1>My Journey Self-Learning Computer Graphics Programming</h1>
+      <p class="meta">November 11, 2020</p>
+    </div>
+    <div class="page-body">
+      <p>I tried to teach myself computer graphics programming. Along the way, I learned many valuable lessons. This post is to document the path I took, and potentially guide others who want to learn.</p>
+
+<p>From a high-level point of view, there are three main steps in my journey.</p>
+
+<ol>
+<li>Learning OpenGL</li>
+<li>Learning Rust</li>
+<li>Learning Vulkan</li>
+</ol>
+
+<p>This is not to say it’s the only way to learn computer graphics, but it’s the path I took. For example, initially I didn’t even consider using Rust, but it ended up being quite a good decision later on.</p>
+
+<div></div>
+
+<h2>Part 1: Learning OpenGL by rendering a Sierpinksi triangle</h2>
+
+<p>The first step in understanding computer graphics was to learn OpenGL.</p>
+
+<p>While learning computer graphics from the <a href="https://learnopengl.com/">learnopengl.com</a> guide, I came across the following images in the comment section.</p>
+
+<figure><img height="491" src="../../images/posts/cg-comment.webp" width="748"/></figure>
+
+<p>These are called Sierpinski triangles, and I thought about how I could recreate them. Clearly, some sort of recursion algorithm was at work. To complete an iteration it felt like I needed to replace every triangle with a triforce version of itself.</p>
+
+<div>
+<figure><img height="480" src="../../images/posts/cg-triforce.jpg" width="1024"/></figure>
+</div>
+
+<p>Basically, I needed to use the midpoint of each side as the vertice of a new triangle. Where I could calculate the midpoint quite easily using <a href="https://www.khanacademy.org/math/geometry/hs-geo-analytic-geometry/hs-geo-distance-and-midpoints/a/midpoint-formula">this simple formula</a>. Now I just needed to write the algorithm in OpenGL.</p>
+
+<h3>But first, how does OpenGL work in a nutshell?</h3>
+
+<p><em>The process of using OpenGL can be summarized as follows:</em></p>
+
+<p>First, you create an array of 3d vertex data used to render a bunch of triangles later on. That data will then be sent to the GPU and run through a pipeline of customizable programs called “shaders”. Shaders figure out how to translate the input vertex data into the position and color of the pixels on your 2d screen.</p>
+
+<p>The two main levers developers can pull are:</p>
+
+<ol>
+<li>The vertex data sent in</li>
+<li>The algorithm in the shaders</li>
+</ol>
+
+<p>In this case, I focused on the vertex data. Although theoretically possible to render a Sierpinski triangle using only shaders, it would be kind of inefficient on a large scale. <a href="https://www.shadertoy.com/view/NdsGRj">I’m sure somebody on ShaderToy has done it though</a>.</p>
+
+<h3>Defining the recursive function</h3>
+
+<p>The function needs to take in the three corners of the original triangle, and the number of iterations we want to perform. It needs to output an array containing the mesh of triangles we want to render.</p>
+
+<p>I set up some classes to simplify the code. There’s a Point class (with member values x, y and z) and a vertex class that will be used as an interface to safely manipulate the final vertex data. The subfunction addTriangle takes care of adding a single triangle to the mesh.</p>
+
+<p>Here’s the code for the function:</p>
+
+<pre>void addSierpinski(Point a, Point b, Point c, int level, Vertices&amp; vertices)
+{
+    Point m0, m1, m2;
+    if (level &gt; 0)
+    {
+        m0.x = (a.x + b.x)/2.0;
+    } else {
+        addTriangle(a,b,c,vertices);
+    }
+}
+</pre>
+
+<p>We then forward the mesh into our shaders, and voila.</p>
+
+<div>
+<figure><img height="321" src="../../images/posts/cg-triangle.jpg" width="420"/><figcaption>The Final Result</figcaption></figure>
+</div>
+
+<p>Refactoring the function to work in 3d is a good exercise.</p>
+
+<div>
+<figure><img height="521" src="../../images/posts/cg-sierpinski.webp" width="332"/></figure>
+</div>
+
+<p>Following the OpenGL tutorial was the first step in my journey. But the next thing I did was to learn a whole new programming language: Rust.</p>
+
+<div></div>
+
+<h2>Part 2: Why I chose to learn computer graphics in Rust</h2>
+
+<p>Up to this point, I had been doing everything in c++. The reason I hated the language so much is simple. Build systems.</p>
+
+<p>CMake is singlehandedly the reason I turned away from c++. It’s so confusing. And c++ header files weren’t easy either. Building anything more than a single file project required hours of research into how to set up the build system. I hated it.</p>
+
+<p>After wasting my time for a few hours one day, I decided I needed to try something else. So I opened up the page for <a href="https://github.com/bwasty/learn-opengl-rs">the Rust port of the learn OpenGL</a> computer graphics guide.</p>
+
+<p>The computer graphics ideas were the exact same, but the difference was the build system. Rust installations come with cargo. Cargo offered a flow that was orders of magnitudes easier. Not to mention because dependencies, tests, and documentation are available by default, they’re widely used (as opposed to c++ where bringing in a dependency can be a nightmare).</p>
+
+<p>In fact looking back at it, Rust has many significant advantages over c++, and I’m glad I switched. Other than the build system <em>cargo</em>, The two other most significant benefits are memory safety and helpful compiler messages.</p>
+
+<p>All the fundamental APIs are written in C and C++. So people write rust wrappers(glium, luminance, ash, vulkano, glx-hal+rendy) that make life nice and safe to varying degrees.</p>
+
+<p>Learning computer graphics in rust was a fantastic decision, and I encourage others to do so as well. <a href="https://github.com/MoreTacos">All of my most recent projects</a> have been in rust. I am a convert.</p>
+
+<div></div>
+
+<h2>Learning Vulkan by diving into the specs</h2>
+
+<p>The next thing I did was start <a href="https://github.com/MoreTacos/sph">a major fluid simulation project in Rust</a>. I started learning about <a href="https://github.com/vulkano-rs/vulkano">Vulkano</a>, which is a safe Rust wrapper around the Vulkan graphics API. I debated whether starting with OpenGL was a better choice, but stuck with Vulkan in the end because it better reflects the process of running programs on graphics hardware architectures.</p>
+
+<div>
+<figure><img src="../../images/posts/cg-vulkan.jpg"/></figure>
+</div>
+
+<p>I believe learning OpenGL is not the best if you wish to learn graphics programming from first principles. It doesn’t really explain what’s going on but allows you to do things by example. And honestly, I think it’s a good thing they don’t explain the background! OpenGL is inherently confusing because it tries to support all the graphics programming paradigms from the last two decades. There are 10 ways to do the same thing, and in the case when a feature isn’t supported, it silently falls back to software emulation, or worse just flags an error and refuses to work.</p>
+
+<p>Vulkan on the other hand is extremely verbose, where everything you do has a purpose. The more the complexity of your program rises, the more valuable Vulkan becomes. This is because Vulkan is more consistent. However this extreme detail comes at a cost, the downside being that it presents a massive learning curve and everything must be set up from scratch.</p>
+
+<p>In my experience as a beginner going through the Rust version of the vulkan-tutorial, whenever I encountered a problem, my first reaction was to turn to Reddit or stack-overflow and find an explanation. This is because I thought the actual specification or vulkano documentation would surely be arcane and filled with accurate but unhelpful explanations and legal jargon. For example at one point I was very confused about the role render passes play in rending vertices onto the screen, and no suitable answer was to be found on Reddit/stack overflow.</p>
+
+<p>The reason questions like these can’t be found on Reddit/stack overflow is because they have already been answered. Answered in <a href="https://www.khronos.org/registry/vulkan/specs/1.2-extensions/html/vkspec.html">the Vulkan specs</a>. The vulkan spec is a suprisingly good computer graphics guide. It is in fact very approachable and helpful. I’ve trained myself to use the specs much more frequently when I don’t understand a feature. I find the glossary at the end to be particularly useful for quick recaps. My methodology for understanding a concept is as follows:</p>
+
+<ol>
+<li>Read the main explanation in the table of contents</li>
+<li>Highlight and search all words in the explanation I don’t understand</li>
+<li>Rinse and repeat until I’ve reduced the concept to its basics (recursive)</li>
+<li>Slowly start building everything back up again from the group up</li>
+</ol>
+
+<p>Let me give an example for the render pass.</p>
+
+<p>Iteration 1:</p>
+
+<ul>
+<li>A render pass represents a collection of <strong>attachments</strong>, <strong>surpasses</strong>, and dependencies between the surpasses, and describes how the attachments are used over the course of the surpasses.</li>
+</ul>
+
+<p>Iteration 2:</p>
+
+<ul>
+<li>Attachment (Render Pass): A zero-based integer index name used in render pass creation to refer to a <strong>framebuffer</strong> attachment that is accessed by one or more subpasses. The index also refers to an attachment description which includes information about the properties of the <strong>image view</strong> that will later be attached.</li>
+</ul>
+
+<ul>
+<li>A subpass represents a phase of rendering that reads and writes a subset of the attachments in a render pass. Rendering commands are recorded into particular subpasses of a render pass instance.</li>
+</ul>
+
+<p>Iteration 3:</p>
+
+<ul>
+<li>Framebuffer: A collection of <strong>image views</strong> and a set of dimensions that, in conjunction with a render pass, define the inputs and outputs used by drawing commands</li>
+</ul>
+
+<ul>
+<li>Image View: An object that represents an <strong>image subresource range</strong> of a specific image, and state that controls how the contents are interpreted.</li>
+</ul>
+
+<p>Iteration 4:</p>
+
+<ul>
+<li>Image subresource range: A set of image subresources that are contiguous mipmap levels and layers</li>
+</ul>
+
+<ul>
+<li>Image subresource: A specific mipmap level and layer of an image</li>
+</ul>
+
+<ul>
+<li>Image: A resource that represents a multi-dimensional formatted interpretation of device memory</li>
+</ul>
+
+<hr/>
+
+<p>Perfect! The concept has been fully reduced to components I believe I understand. For reference this is a mipmap:</p>
+
+<div>
+<figure><img src="../../images/posts/cg-mipmap.jpg"/></figure>
+</div>
+
+<p>Now I can slowly go back up composing the statements together making sure I fully understand each component intuitively.</p>
+
+<p>In fact another technique I use to seal the deal and <strong>fully</strong> understand is that I then <a href="https://feynmanmafia.com/">try to pass on the explanation to somebody else</a> (usually my brother or dad if they’re around).</p>
+
+<p>Anyways that concludes the story of how I learned graphics programming. As I mentioned earlier in the post, I started working on and eventually finished a large wrap-up project: an SPH fluid simulation. Here’s what that looked like:</p>
+
+<div>
+<figure><img height="384" src="../../images/posts/cg-fluidsim.gif" width="512"/></figure>
+</div>
+    </div>
+  </article>
+
+<script>if('serviceWorker'in navigator)navigator.serviceWorker.getRegistrations().then(rs=>rs.forEach(r=>r.unregister()))</script>
+<script type="speculationrules">{"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
+</body>
+</html>

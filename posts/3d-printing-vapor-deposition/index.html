@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Printing with Vapor Deposition &ndash; Davide Radaelli</title>
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,400;1,400&family=Open+Sans:wght@400;600;700&display=swap">
+  <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}:root{--color-primary:#000000;--color-secondary:#007cba;--color-foreground:#333333;--color-foreground-low-contrast:#444444;--color-background:#FFFFFF;--color-tertiary:#FAFAFA;--color-border:#EFEFEF;--font-heading:Chivo,"Playfair Display",Georgia,Times,serif;--font-body:"Open Sans","Fira Sans",Helvetica,Arial,sans-serif;--content-width:620px;--spacing-unit:20px;--spacing-horizontal:25px;--spacing-vertical:30px;}html{scrollbar-gutter:stable}body{font-family:var(--font-body);font-size:18px;font-weight:normal;color:var(--color-foreground);background:var(--color-background);line-height:1.7;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}a{color:var(--color-primary);text-decoration:underline;text-decoration-color:var(--color-secondary);text-decoration-thickness:1px;text-underline-offset:2px;}a:hover{color:var(--color-secondary);}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:normal;line-height:1.3;color:var(--color-primary);margin:0;padding:0;}h1{font-size:48px;}h2{font-size:32px;}h3{font-size:28px;}h4{font-size:24px;}nav{display:flex;align-items:center;gap:0.5em;padding:var(--spacing-vertical) calc(2 * var(--spacing-horizontal));flex-wrap:wrap;max-width:var(--content-width);margin:0 auto;}nav a{color:var(--color-primary);font-family:var(--font-body);font-size:16px;font-weight:normal;text-decoration:none;padding:0 0.4em;}nav a:hover{color:var(--color-secondary);text-decoration:none;}nav .social-icons{display:flex;align-items:center;gap:0.4em;margin-left:0.2em;}nav .social-icons a{display:flex;align-items:center;padding:0;line-height:0;}nav .social-icons a[aria-label="Twitter"]{color:#1DA1F2;}nav .social-icons a[aria-label="YouTube"]{color:#FF0000;}nav .social-icons a:hover{color:var(--color-secondary);transform:scale(1.1);}nav .social-icons svg{width:24px;height:24px;fill:currentColor;}.home-content{display:flex;flex-wrap:nowrap;gap:2em;max-width:var(--content-width);margin:0 auto;padding:0 calc(2 * var(--spacing-horizontal));}.home-content .col-image{flex:0 0 33.33%;}.home-content .col-image img{width:100%;height:auto;display:block;}.home-content .col-text{flex:0 0 66.67%;max-width:66.67%;}.home-content .col-text h1{margin-bottom:calc(0.666 * var(--spacing-vertical));}.home-content .col-text p{margin-top:calc(0.666 * var(--spacing-vertical));margin-bottom:calc(0.666 * var(--spacing-vertical));}.page{max-width:var(--content-width);margin:0 auto;padding:0 calc(2 * var(--spacing-horizontal)) var(--spacing-vertical);}.page-header{margin-bottom:calc(0.666 * var(--spacing-vertical));}.page-header .meta{color:var(--color-foreground-low-contrast);font-family:var(--font-heading);font-size:14px;}.page-body > *{margin-top:calc(0.666 * var(--spacing-vertical));margin-bottom:calc(0.666 * var(--spacing-vertical));}.page-body h2{font-family:var(--font-heading);font-size:32px;font-weight:normal;line-height:1.3;color:var(--color-primary);}.page-body h3{font-family:var(--font-heading);font-size:28px;font-weight:normal;line-height:1.3;color:var(--color-primary);}.page-body h4{font-family:var(--font-heading);font-size:24px;font-weight:normal;line-height:1.3;color:var(--color-primary);}.page-body ul,.page-body ol{font-family:var(--font-body);padding-left:calc(2 * var(--spacing-horizontal));}.page-body ul{list-style-type:disc;}.page-body ol{list-style-type:decimal;}.page-body li{margin-top:calc(0.25 * var(--spacing-vertical));margin-bottom:calc(0.25 * var(--spacing-vertical));}.page-body blockquote{border-left:1px solid var(--color-secondary);padding:0;padding-left:calc(2 * var(--spacing-horizontal));margin:calc(0.666 * var(--spacing-vertical)) 0;font-family:var(--font-body);font-style:normal;}.page-body img{max-width:100%;height:auto;}.page-body figure{margin:calc(0.666 * var(--spacing-vertical)) 0;}.page-body figure img{max-width:100%;height:auto;display:block;margin:0 auto;}.page-body figcaption{color:var(--color-foreground-low-contrast);font-size:14px;line-height:1.7;margin-top:calc(0.5 * var(--spacing-unit));text-align:center;}.page-body code{font-family:monospace,monospace;font-size:1em;}.page-body pre{font-family:monospace,monospace;font-size:1em;overflow:scroll;margin:calc(0.666 * var(--spacing-vertical)) 0;padding:0;}.page-body pre code{background:none;padding:0;}.page-body hr{border:none;border-top:2px solid var(--color-border);width:calc(6 * var(--spacing-horizontal));margin:calc(0.666 * var(--spacing-vertical)) auto;}.blog-list{list-style:none;padding:0;}.blog-list li{margin-top:calc(0.666 * var(--spacing-vertical));margin-bottom:calc(0.666 * var(--spacing-vertical));}.blog-list li a{font-family:var(--font-heading);font-size:28px;font-weight:normal;line-height:1.3;color:var(--color-primary);text-decoration:underline;text-decoration-color:var(--color-secondary);text-decoration-thickness:1px;text-underline-offset:2px;}.blog-list li a:hover{color:var(--color-secondary);}.blog-list .date{display:block;color:var(--color-foreground-low-contrast);font-family:var(--font-heading);font-size:14px;margin-top:4px;}.back-link{display:inline-block;font-size:14px;color:var(--color-primary);text-decoration:underline;text-decoration-color:var(--color-secondary);margin-bottom:var(--spacing-vertical);}.back-link:hover{color:var(--color-secondary);}.back-link::before{content:'\2190\00a0';}footer{padding:var(--spacing-vertical) calc(2 * var(--spacing-horizontal));max-width:var(--content-width);margin:0 auto;color:var(--color-foreground);font-family:var(--font-heading);font-size:16px;}@media (max-width:600px){nav{padding:var(--spacing-unit) var(--spacing-horizontal);}.home-content{flex-wrap:wrap;padding:0 var(--spacing-horizontal);}.home-content .col-image{flex:0 0 100%;max-width:90%;}.home-content .col-text{flex:0 0 100%;max-width:100%;}.page{padding:0 var(--spacing-horizontal) var(--spacing-vertical);}.blog-list li a{font-size:24px;}}</style>
+</head>
+<body>
+  <nav>
+      <a href="/">Home</a>
+      <a href="/now/">Now</a>
+      <a href="/blog/">Blog</a>
+      <a href="https://davideradaelli.substack.com/" target="_blank">Updates</a>
+      <span class="social-icons">
+        <a href="https://twitter.com/daviderady" target="_blank" aria-label="Twitter"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"/></svg></a>
+        <a href="https://www.youtube.com/channel/UCmYjuQS6o5-F9sqX8Pwvsiw" target="_blank" aria-label="YouTube"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.8,8.001c0,0-0.195-1.378-0.795-1.985c-0.76-0.797-1.613-0.801-2.004-0.847c-2.799-0.202-6.997-0.202-6.997-0.202 h-0.009c0,0-4.198,0-6.997,0.202C4.608,5.216,3.756,5.22,2.995,6.016C2.395,6.623,2.2,8.001,2.2,8.001S2,9.62,2,11.238v1.517 c0,1.618,0.2,3.237,0.2,3.237s0.195,1.378,0.795,1.985c0.761,0.797,1.76,0.771,2.205,0.855c1.6,0.153,6.8,0.201,6.8,0.201 s4.203-0.006,7.001-0.209c0.391-0.047,1.243-0.051,2.004-0.847c0.6-0.607,0.795-1.985,0.795-1.985s0.2-1.618,0.2-3.237v-1.517 C22,9.62,21.8,8.001,21.8,8.001z M9.935,14.594l-0.001-5.62l5.404,2.82L9.935,14.594z"/></svg></a>
+      </span>
+  </nav>
+
+  <article class="page">
+    <a href="/blog/" class="back-link">All posts</a>
+    <div class="page-header">
+      <h1>3D Printing with Vapor Deposition</h1>
+      <p class="meta">October 13, 2022</p>
+    </div>
+    <div class="page-body">
+      <p>Metal 3D printers can manufacture parts with geometric complexity that no other process can match. But because of their tiny throughput, they are limited to producing only a small number of high value parts.</p>
+
+<p>The throughput for metal 3D printing is fundamentally limited by the method for material delivery. Powder-bed approaches will always be limited by the time it takes to spread a new layer, and nozzle approaches by the circuitous path they need to take.</p>
+
+<p>Vapor deposition as a process would avoid these constraints and allow for throughput orders of magnitude higher than what currently exists. This would allow 3D metal printing to reach serial production.</p>
+
+<p>In this article I will be talking about the main technical gaps that need to be addressed for this process to be viable.</p>
+
+<figure><img alt="" height="568" src="../../images/posts/vapor-deposition1.jpg" width="1024"/></figure>
+
+<h3>1. How fast can vapor deposition be?</h3>
+
+<p>Vapor deposition processes can be split into physical vapor deposition (PVD), and chemical vapor deposition (CVD). The former works by having vapor directly condense onto the surface, whereas the latter works by having vapors react chemically with the substrate to deposit a layer of material.</p>
+
+<p>Both PVD and CVD have extremely slow deposition rates, measured in nanometers per second. This is far too slow for additive manufacturing. At that rate it would take days for a single millimeter to deposit.</p>
+
+<p>But these processes are designed for thin films and coatings applications, where the deposition rate doesn’t need to be fast. The chambers operate at around one thousandth of atmospheric pressure, and so it’s no surprise that the deposition rate is so slow.</p>
+
+<p>The deposition rate scales linearly with the pressure of the reactants, so throughput can reach into the <a href="https://href.li/?https://www.science.org/doi/10.1126/science.267.5202.1274">millimeters per second</a> by increasing the pressure of the reactants to atmospheric pressure, or even higher.</p>
+
+<h3>2. Can we control where the vapor deposits?</h3>
+
+<p>Lasers can be used to <a href="https://href.li/?https://ndml.me.utexas.edu/sites/default/files/Current%20challenges%20and%20potential%20directions%20towards%20precision%20microscale%20Part%203.pdf">control CVD</a> by providing the energy to activate the deposition reaction locally. This can either happen by heat or light, in which case the process is called pyrolytic or photolytic respectively.</p>
+
+<p>Generally light is preferred because it can operate at lower temperatures, which results in fewer thermal stresses building up, and better print resolution because you avoid needing to control the thermal profile.</p>
+
+<p>Laser CVD works by pointing a laser at a single spot at a time, but it could be possible to speed up the process by projecting an entire area on the substrate at once with a spatial light modulator.</p>
+
+<p>One problem with parallelizing the process is that the vapor in the area that borders the substrate will be emptied of reactants and this will slow down deposition. When you have a single laser, the nearby gas can flow into the laser spot and continue the deposition. This can’t happen when you react an entire surface at a time.</p>
+
+<p>One solution would be to create convection flows that replenish the reactants where they’re needed. Especially if the chamber is operating at higher pressure and concentration of precursors, the diffusion of the gases would be enhanced. Another approach could use <a href="https://href.li/?https://www.sciencedirect.com/science/article/abs/pii/037015738890172X">light induced drift</a>.</p>
+
+<h3>3. Can we fabricate complex 3d features?</h3>
+
+<p>New layers being printed need to be supported by previous layers. For the bioprinting of tissues, <a href="https://www.digitalengineering247.com/article/bioprinting-with-sugar">sugar is used</a> as a structural support on which new layers are printed. The sugar is later removed by being dissolved.</p>
+
+<p>It could be possible to develop a precursor that acts in a similar way for laser CVD. For this to work we would need a way to deposit two materials at different locations.</p>
+
+<p>Because precursors have a unique absorption spectrum, this could be done by pairing each precursor with a laser that has the appropriate wavelength to induce a chemical reaction with the substrate. This would enable true layer by layer vapor deposition.</p>
+
+<h3>4. What materials can we deposit?</h3>
+
+<p>There is some research showing that it’s possible to fabricate <a href="https://link.springer.com/article/10.1557/PROC-397-601">alloys with vapor deposition</a>. But a lot of the research was done for thin coatings, and so we just don’t know that much about what materials can be deposited at higher atmospheric pressures.</p>
+
+<p>Ideally it would be possible to print high demand alloys like stainless steel 316L, Inconel, Ti64 and different aluminium alloys, but more research needs to be done.</p>
+
+<hr/>
+
+<h3>Final Thoughts</h3>
+
+<p>The main problem with vapor deposition is that it is an inherently slow method for material delivery. Most vapor deposition processes happen at very low pressures, or very low concentration of reactants, so developing a fast 3d printing process would be really difficult.</p>
+
+<p>Also, there’s a big limitation when it comes to the geometries one can print. This is because there isn’t any way to print with a “filler” material that provides structural support for the next layer.</p>
+
+<p>Overall, it’s an interesting problem to consider, and I look forward to doing more research in vapor deposition.</p>
+
+<p>Thank you to <a href="https://uwaterloo.ca/mechanical-mechatronics-engineering/profile/kmusselm">Professor Kevin Musselman</a>, <a href="https://www.me.gatech.edu/faculty/rosen">Professor David Rosen</a>, and Professor <a href="https://uwaterloo.ca/materials-interface-foundry/profiles/vlad-paserin">Vlad Paserin</a> for feedback on the ideas described in this post.</p>
+    </div>
+  </article>
+
+<script>if('serviceWorker'in navigator)navigator.serviceWorker.getRegistrations().then(rs=>rs.forEach(r=>r.unregister()))</script>
+<script type="speculationrules">{"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
+</body>
+</html>
