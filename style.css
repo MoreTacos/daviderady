@@ -273,7 +273,7 @@ nav .social-icons svg {
 }
 
 /* ===== BLOG LIST ===== */
-.blog-list {
+.page-body .blog-list {
   list-style: none;
   padding: 0;
 }
