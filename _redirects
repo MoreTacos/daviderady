@@ -1,1 +1,17 @@
 https://www.daviderady.com/* https://daviderady.com/:splat 301
+
+# Old WordPress URL redirects (preserve SEO)
+/2019/09/16/intuition-for-nlp-explanation-ernie-2-0/ /posts/ernie-nlp/ 301
+/2020/01/04/anime-face-generator-using-a-dcgan/ /posts/anime-dcgan/ 301
+/2020/11/11/self-learning-computer-graphics-programming-2/ /posts/computer-graphics/ 301
+/2020/12/30/how-liam-hinzman-sneezed-on-me/ /posts/liam-hinzman/ 301
+/2021/01/16/the-best-way-to-learn-math-on-your-own-one-textbook-a-day/ /posts/choose-textbooks/ 301
+/2021/03/17/solve-all-problems-by-figuring-out-simulations/ /posts/simulate-everything/ 301
+/2021/05/07/guide-rocket-sled-for-a-rust-production-web-app/ /posts/rocket-sled-rust/ 301
+/2021/09/14/activate-advice/ /posts/activate-advice/ 301
+/2021/11/19/frederic-schuller-lectures/ /posts/frederic-schuller-lectures/ 301
+/2022/01/17/how-i-use-the-feynman-technique-to-learn-everyday/ /posts/feynman-technique/ 301
+/2022/07/26/primer-math/ /posts/reflections-primer/ 301
+/2022/10/13/additive-manufacturing-by-vapor-deposition/ /posts/3d-printing-vapor-deposition/ 301
+/2023/04/13/why-idiosyncratic-applications-are-great/ /posts/idiosyncratic-applications/ 301
+/2024/11/01/arpa-did-not-invent-the-personal-computer-and-internet/ /posts/arpa-programs-dont-work/ 301
