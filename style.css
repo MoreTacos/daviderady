@@ -145,10 +145,12 @@ nav .social-icons svg {
 }
 
 .home-content .col-text h1 {
+  font-size: 36px;
   margin-bottom: calc(0.666 * var(--spacing-vertical));
 }
 
 .home-content .col-text p {
+  font-size: 16px;
   margin-top: calc(0.666 * var(--spacing-vertical));
   margin-bottom: calc(0.666 * var(--spacing-vertical));
 }
