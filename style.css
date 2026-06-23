@@ -130,7 +130,7 @@ nav .social-icons svg {
 }
 
 .home-content .col-image {
-  flex: 0 0 33.33%;
+  flex: 0 0 22%;
 }
 
 .home-content .col-image img {
@@ -140,8 +140,7 @@ nav .social-icons svg {
 }
 
 .home-content .col-text {
-  flex: 0 0 66.67%;
-  max-width: 66.67%;
+  flex: 1 1 auto;
 }
 
 .home-content .col-text h1 {
@@ -350,7 +349,7 @@ footer {
 
   .home-content .col-image {
     flex: 0 0 100%;
-    max-width: 200px;
+    max-width: 130px;
   }
 
   .home-content .col-text {
