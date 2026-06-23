@@ -350,11 +350,13 @@ footer {
   .home-content .col-image {
     flex: 0 0 100%;
     max-width: 130px;
+    order: 2;
   }
 
   .home-content .col-text {
     flex: 0 0 100%;
     max-width: 100%;
+    order: 1;
   }
 
   .page {
